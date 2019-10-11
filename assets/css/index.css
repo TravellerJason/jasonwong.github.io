@@ -6,7 +6,7 @@ html {
 	overflow-x: hidden;
 	overflow-y: auto;
 }
-html, body {display: block; height: 100%;}
+html, body {margin: 0; display: block; height: 100%;}
 
 ::-webkit-scrollbar {
 	width: 6px;
@@ -23,11 +23,24 @@ html, body {display: block; height: 100%;}
 	background: #3C3C3C;
 }
 
+#heading-part {
+	width: 100vw;
+	height: auto;
+}
+
 #heading {
 	font-size: 60px;
 	text-align: center;
 	position: relative;
 	top: 220px;
+}
+
+#sub-heading {
+	text-align: center;
+	position: relative;
+	top: 170px;
+	font-size: 24px;
+	font-weight: lighter;
 }
 
 #home-page-img {
@@ -56,7 +69,7 @@ html, body {display: block; height: 100%;}
 }
 
 #header-icon {
-	background-image: url(../media/header_icon.ico);
+	background-image: url(../media/header_icon.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -74,10 +87,21 @@ html, body {display: block; height: 100%;}
 #header-list ul {
 	margin: 0 0;
 }
-
 #header-list ul a {
 	text-decoration: none;
-	margin: 0 30px;
+	margin: 0 1.5vw;
+	color: #DCDCDC;
+}
+
+#header-details {
+	float: right;
+	margin-right: 20%;
+}
+#header-details ul {
+	margin: 0 1.5vw;
+	font-size: 24px;
+}
+#header-details ul li a {
 	color: #DCDCDC;
 }
 
