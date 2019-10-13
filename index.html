@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="author" content="Jason-Wong">
+		<meta name="author" content="Jason Wong">
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="assets/css/index.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/fonts.css">
-		<title>Traveller-Jason</title>
+		<title>Jason Wong</title>
 	</head>
 	<body>
 		<div id="heading-part">
@@ -14,31 +14,37 @@
 			<h1 id="heading">Jason Wong's</h1>
 			<h3 id="sub-heading">website</h3>
 			<header id="header">
-				<span id="header-icon"></span>
+				<a id="header-icon" href="/"></a>
 				<nav id="header-list">
 					<ul>
-						<a id="header-gallery" href="">Gallery</a>
-						<a id="header-articles" href="">Articles</a>
-						<a id="header-tools" href="">Tools</a>
-						<a id="header-about" href="">About</a>
+						<div class="header-div" id="header-about">
+							<a class="header-option" id="text-about" href="">About</a>
+							<ul class="detail-class" id="about-detail" style="width: 200px;">
+								<li><a href="">Me</a></li>
+								<li><a href="">Website</a></li>
+							</ul>
+						</div>
+						<div class="header-div" id="header-tools">
+							<a class="header-option" id="text-tools" href="">Tools</a>
+							<ul class="detail-class" id="tools-detail" style="width: 200px;">
+								<li><a href="">Crawl News</a></li>
+								<li><a href="">Financial Data</a></li>
+								<li><a href="">Coming soon!</a></li>
+							</ul>
+						</div>
+						<div class="header-div" id="header-articles">
+							<a class="header-option" id="text-articles" href="">Articles</a>
+							<ul class="detail-class" id="articles-detail" style="width: 200px;">
+								<li><a href="">All articles</a></li>
+								<li><a href="">Categories</a></li>
+								<li><a href="">Tags</a></li>
+							</ul>
+						</div>
+						<div class="header-div" id="header-gallery">
+							<a class="header-option" id="text-gallery" href="">Gallery</a>
+						</div>
 					</ul>
 				</nav>
-				<div id="header-details">
-					<ul id="articles-detail">
-						<li><a href="">All articles</a></li>
-						<li><a href="">Categories</a></li>
-						<li><a href="">Tags</a></li>
-					</ul>
-					<ul id="tools-detail">
-						<li><a href="">Crawl News</a></li>
-						<li><a href="">Financial Data</a></li>
-						<li><a href="">Coming soon!</a></li>
-					</ul>
-					<ul id="about-detail">
-						<li><a href="">Me</a></li>
-						<li><a href="">Website</a></li>
-					</ul>
-				</div>
 			</header>
 		</div>
 		<div id="main-part">
@@ -61,8 +67,5 @@
 	<script src="assets/js/index.js"></script>
 	<script type="text/javascript">
 		background_canvas()
-		setElementPosition_for_header("header-about", "about-detail");
-		setElementPosition_for_header("header-tools", "tools-detail");
-		setElementPosition_for_header("header-articles", "articles-detail");
 	</script>
 </html>

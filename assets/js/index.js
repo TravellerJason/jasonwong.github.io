@@ -22,12 +22,11 @@ function getElementPosition(el_id)
 	}
 }
 
-function setElementPosition_for_header(p_el_id, s_el_id)
-{
-	let a = getElementPosition(p_el_id);
-	let b = document.getElementById(s_el_id);
-	b.style.position="absolute";
-	b.style.top = a.top + a.height / 2 + "px";
-	b.style.left = a.left - a.width / 2 + "px";
-
-}
+// function setElementPosition_for_header(p_el_id, s_el_id)
+// {
+// 	let a = getElementPosition(p_el_id);
+// 	let b = document.getElementById(s_el_id);
+// 	b.style.position="absolute";
+// 	b.style.top = "62px";
+// 	b.style.left = a.left - a.width / 2 + "px";
+// }

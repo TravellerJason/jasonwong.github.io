@@ -59,13 +59,16 @@ html, body {margin: 0; display: block; height: 100%;}
 }
 
 #header {
-	/*background-color: #202124;*/
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100vw;
-	height: 26px;
-	margin: 20px 0;
+	height: 66px;
+	padding: 10px 0;
+	transition: background-color 0.1s linear;
+}
+#header:hover {
+	background-color: #202124;
 }
 
 #header-icon {
@@ -82,27 +85,67 @@ html, body {margin: 0; display: block; height: 100%;}
 #header-list {
 	float: right;
 	margin-right: 20%;
+	margin-top: 10px;
 }
 
 #header-list ul {
 	margin: 0 0;
 }
-#header-list ul a {
-	text-decoration: none;
+#header-list ul div {
+	float: right;
 	margin: 0 1.5vw;
+}
+.header-div {
+	width: 100px;
+}
+.header-option {
+	text-decoration: none;
+	padding-bottom: 25px;
+	font-size: 24px;
 	color: #DCDCDC;
+	transition: color 0.1s linear;
+	transition: border-bottom 0.1s linear;
 }
 
-#header-details {
-	float: right;
-	margin-right: 20%;
-}
-#header-details ul {
-	margin: 0 1.5vw;
+.detail-class {
+	position: relative;
+	top: 26px;
+	background-color: #202124;
+	overflow: hidden;
+	height: 0;
+	padding: 0 10px;
 	font-size: 24px;
+	transition: height 0.1s linear;
 }
-#header-details ul li a {
+.detail-class li {
+	margin: 10px 0;
+	list-style: none;
+}
+.detail-class li a {
+	text-decoration: none;
 	color: #DCDCDC;
+	font-weight: lighter;
+	transition: color 0.1s linear;
+}
+.detail-class li a:hover {color: #F5F5F5;}
+
+#header-about:hover #text-about {color: #F5F5F5;border-bottom: 2px solid #F5F5F5;}
+#header-tools:hover #text-tools {color: #F5F5F5;border-bottom: 2px solid #F5F5F5;}
+#header-articles:hover #text-articles {color: #F5F5F5;border-bottom: 2px solid #F5F5F5;}
+#header-gallery:hover #text-gallery {color: #F5F5F5;}
+
+#header-about:hover {}
+#header-tools:hover {}
+#header-articles:hover {}
+
+#header-about:hover #about-detail {
+	height: 92px;
+}
+#header-tools:hover #tools-detail {
+	height: 133px;
+}
+#header-articles:hover #articles-detail {
+	height: 133px;
 }
 
 
