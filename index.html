@@ -3,6 +3,7 @@
 	<head>
 		<meta name="author" content="Jason Wong">
 		<meta charset="utf-8">
+		<link rel="icon" href="assets/media/icon.png" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="assets/css/index.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/fonts.css">
 		<title>Jason Wong</title>
@@ -10,40 +11,52 @@
 	<body>
 		<div id="heading-part">
 			<canvas id="canvas"></canvas>
-			<img id="home-page-img" src="assets/media/home_page_heading_img.png">
+			<img class="home-heading-img big-screen" id="home-heading-img" src="assets/media/home_heading_img.jpg">
 			<h1 id="heading">Jason Wong's</h1>
 			<h3 id="sub-heading">website</h3>
-			<header id="header">
+<!-- 	 -->		<header class="header big-screen" id="header">
 				<a id="header-icon" href="/"></a>
 				<nav id="header-list">
-					<ul>
-						<div class="header-div" id="header-about">
-							<a class="header-option" id="text-about" href="">About</a>
+<!-- 	 -->				<ul class="header-list big-screen visible" id="big-header-list">
+						<div class="header-div" id="header-about" style="width: 71px;">
+							<a class="header-option has-detail-list" href="">About</a>
 							<ul class="detail-class" id="about-detail" style="width: 200px;">
 								<li><a href="">Me</a></li>
 								<li><a href="">Website</a></li>
 							</ul>
 						</div>
-						<div class="header-div" id="header-tools">
-							<a class="header-option" id="text-tools" href="">Tools</a>
+						<div class="header-div" id="header-tools" style="width: 62px;">
+							<a class="header-option has-detail-list" href="">Tools</a>
 							<ul class="detail-class" id="tools-detail" style="width: 200px;">
 								<li><a href="">Crawl News</a></li>
 								<li><a href="">Financial Data</a></li>
 								<li><a href="">Coming soon!</a></li>
 							</ul>
 						</div>
-						<div class="header-div" id="header-articles">
-							<a class="header-option" id="text-articles" href="">Articles</a>
-							<ul class="detail-class" id="articles-detail" style="width: 200px;">
-								<li><a href="">All articles</a></li>
+						<div class="header-div" id="header-blog" style="width: 52px;">
+							<a class="header-option has-detail-list" href="">Blog</a>
+							<ul class="detail-class" id="blog-detail" style="width: 200px;">
+								<li><a href="">Blog</a></li>
 								<li><a href="">Categories</a></li>
 								<li><a href="">Tags</a></li>
 							</ul>
 						</div>
-						<div class="header-div" id="header-gallery">
-							<a class="header-option" id="text-gallery" href="">Gallery</a>
+						<div class="header-div" id="header-gallery" style="width: 80px;">
+							<a class="header-option no-detail-list" href="">Gallery</a>
 						</div>
 					</ul>
+<!-- 	 -->				<div class="header-list small-screen hidden" id="small-header-list">
+						<input type="checkbox" id="menu-btn">
+						<label for="menu-btn"><span id="menu-icon"></span></label>
+						<div id="header-menu">
+							<ul>
+								<li><a href="">Gallery</a></li>
+								<li><a href="">Blog</a></li>
+								<li><a href="">Tools</a></li>
+								<li><a href="">About</a></li>
+							</ul>
+						</div>
+					</div>
 				</nav>
 			</header>
 		</div>
@@ -60,7 +73,9 @@
 				</div>
 			</div>
 			<footer id="ending-part">
-				<div id="copyright">Copyright &copy 2019 Jason Wong</div>
+				<div id="copyright">
+					Copyright &copy 2019 <a href="http://www.jasonwong.site">Jason Wong</a>
+				</div>
 			</footer>
 		</div>
 	</body>

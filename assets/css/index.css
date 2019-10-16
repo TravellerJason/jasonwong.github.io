@@ -23,31 +23,43 @@ html, body {margin: 0; display: block; height: 100%;}
 	background: #3C3C3C;
 }
 
+.hidden {display: none;}
+
 #heading-part {
 	width: 100vw;
 	height: auto;
 }
 
 #heading {
-	font-size: 60px;
-	text-align: center;
 	position: relative;
-	top: 220px;
+	text-align: center;
+	color: #F5F5F5;
+	font-size: 60px;
+	top: 24vh; /*220px*/
 }
 
 #sub-heading {
 	text-align: center;
 	position: relative;
-	top: 170px;
+	top: calc(24vh - 48px); /*170px*/
 	font-size: 24px;
 	font-weight: lighter;
 }
 
-#home-page-img {
-	width: 100vw;
+#home-heading-img {
+
+}
+.home-heading-img.big-screen {
 	position: absolute;
 	left: 0;
+	top: calc((56.25vw - 64vh) / -2);
+	width: 100vw;
+}
+.home-heading-img.small-screen {
+	position: absolute;
+	left: calc((140vh - 100vw) / -2);
 	top: 0;
+	height: 80vh;
 }
 
 #canvas {
@@ -67,12 +79,15 @@ html, body {margin: 0; display: block; height: 100%;}
 	padding: 10px 0;
 	transition: background-color 0.1s linear;
 }
-#header:hover {
+.header.big-screen:hover {
+	background-color: #202124;
+}
+.header.small-screen {
 	background-color: #202124;
 }
 
 #header-icon {
-	background-image: url(../media/header_icon.png);
+	background-image: url(../media/icon.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -91,14 +106,11 @@ html, body {margin: 0; display: block; height: 100%;}
 #header-list ul {
 	margin: 0 0;
 }
-#header-list ul div {
+.header-list.big-screen div {
 	float: right;
 	margin: 0 1.5vw;
 }
-.header-div {
-	width: 100px;
-}
-.header-option {
+.header-list.big-screen .header-option {
 	text-decoration: none;
 	padding-bottom: 25px;
 	font-size: 24px;
@@ -107,45 +119,76 @@ html, body {margin: 0; display: block; height: 100%;}
 	transition: border-bottom 0.1s linear;
 }
 
-.detail-class {
+.header-list.big-screen .detail-class {
 	position: relative;
 	top: 26px;
 	background-color: #202124;
 	overflow: hidden;
 	height: 0;
-	padding: 0 10px;
-	font-size: 24px;
+	padding: 0 14px;
+	font-size: 20px;
 	transition: height 0.1s linear;
 }
-.detail-class li {
-	margin: 10px 0;
+.header-list.big-screen .detail-class li {
+	margin: 14px 0;
 	list-style: none;
 }
-.detail-class li a {
+.header-list.big-screen .detail-class li a {
 	text-decoration: none;
 	color: #DCDCDC;
 	font-weight: lighter;
 	transition: color 0.1s linear;
+	transition: border-left 0.1s linear;
+	transition: padding-left 0.1s linear;
 }
-.detail-class li a:hover {color: #F5F5F5;}
+.header-list.big-screen .detail-class li a:hover {color: #F5F5F5; border-left: 2px solid #F5F5F5; padding-left: 5px;}
 
-#header-about:hover #text-about {color: #F5F5F5;border-bottom: 2px solid #F5F5F5;}
-#header-tools:hover #text-tools {color: #F5F5F5;border-bottom: 2px solid #F5F5F5;}
-#header-articles:hover #text-articles {color: #F5F5F5;border-bottom: 2px solid #F5F5F5;}
-#header-gallery:hover #text-gallery {color: #F5F5F5;}
+.header-div:hover .header-option.has-detail-list {color: #F5F5F5; border-bottom: 2px solid #F5F5F5;}
+.header-div:hover .header-option.no-detail-list {color: #F5F5F5;}
 
-#header-about:hover {}
-#header-tools:hover {}
-#header-articles:hover {}
+#header-about:hover #about-detail {height: 92px;}
+#header-tools:hover #tools-detail {height: 133px;}
+#header-blog:hover #blog-detail {height: 133px;}
 
-#header-about:hover #about-detail {
-	height: 92px;
+
+#menu-btn:checked ~ #header-menu {height: 224px;}
+#menu-btn {display: none}
+#menu-icon {
+	background-image: url(../media/menu-icon.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: middle;
+	width: 40px;
+	height: 40px;
 }
-#header-tools:hover #tools-detail {
-	height: 133px;
+
+#header-menu {
+	height: 0;
+	overflow: hidden;
+	background-color: #202124;
+	position: absolute;
+	left: 0;
+	top: 80px;
+	width: 100vw;
+	padding-left: 20%;
+	transition: height 0.1s linear;
 }
-#header-articles:hover #articles-detail {
-	height: 133px;
+
+#header-menu ul {
+	list-style: none;
+	padding: 0;
+}
+#header-menu li {
+	margin: 20px 0;
+	font-size: 24px;
+}
+#header-menu a {
+	text-decoration: none;
+	width: 100px;
+	color: #DCDCDC;
 }
 
 
@@ -157,7 +200,7 @@ html, body {margin: 0; display: block; height: 100%;}
 	min-height: 600px;
 	position: absolute;
 	left: 0px;
-	top: 640px;
+	top: 68vh; /*640px*/
 }
 
 #main-part div.item {
@@ -224,7 +267,9 @@ html, body {margin: 0; display: block; height: 100%;}
 #ending-part a {
 	text-decoration: none;
 	color: #DCDCDC;
+	transition: color 0.1s linear;
 }
+#ending-part a:hover {color: #F5F5F5;}
 
 #copyright {
 	float: right;
