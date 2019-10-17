@@ -26,8 +26,12 @@ html, body {margin: 0; display: block; height: 100%;}
 .hidden {display: none;}
 
 #heading-part {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100vw;
-	height: auto;
+	height: 80vh;
 }
 
 #heading {
@@ -46,9 +50,6 @@ html, body {margin: 0; display: block; height: 100%;}
 	font-weight: lighter;
 }
 
-#home-heading-img {
-
-}
 .home-heading-img.big-screen {
 	position: absolute;
 	left: 0;
@@ -207,10 +208,11 @@ html, body {margin: 0; display: block; height: 100%;}
 	box-shadow: 0px 0px 10px 1px #101010;
 	background-color: #292A2D;
 	border: 1px solid #2B2C28;
-	width: 800px;
 	min-height: 320px;
 	margin: 30px auto;
 }
+.main-part.big-screen div.item {width: 800px;}
+.main-part.small-screen div.item {width: 96vw;}
 
 #main-part div.item h1, h3, .content {
 	margin: 10px 30px 10px 30px;
