@@ -30,6 +30,7 @@ function resize()
 	let header = document.getElementById("header");
 	let big_header_list = document.getElementById("big-header-list");
 	let small_header_list = document.getElementById("small-header-list");
+	let main_part = document.getElementById("main-part");
 	if(screenWidth < screenHeight || screenWidth < 800) {
 		header.classList.add("small-screen");
 		header.classList.remove("big-screen");
@@ -39,6 +40,9 @@ function resize()
 
 		small_header_list.classList.add("visible");
 		small_header_list.classList.remove("hidden");
+
+		main_part.classList.add("small-screen");
+		main_part.classList.remove("big-screen");
 	} else {
 		header.classList.add("big-screen");
 		header.classList.remove("small-screen");
@@ -48,6 +52,9 @@ function resize()
 
 		small_header_list.classList.add("hidden");
 		small_header_list.classList.remove("visible");
+		
+		main_part.classList.add("big-screen");
+		main_part.classList.remove("small-screen");
 	}
 	if(screenWidth < 1.4 * screenHeight) {
 		heading_img.classList.add("small-screen");
